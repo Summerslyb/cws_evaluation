@@ -27,12 +27,12 @@ import org.apdplat.evaluation.Evaluation;
 import org.apdplat.evaluation.EvaluationResult;
 import org.apdplat.evaluation.Segmenter;
 import org.apdplat.evaluation.WordSegmenter;
-import org.lionsoul.jcseg.core.ADictionary;
-import org.lionsoul.jcseg.core.DictionaryFactory;
-import org.lionsoul.jcseg.core.ISegment;
-import org.lionsoul.jcseg.core.IWord;
-import org.lionsoul.jcseg.core.JcsegTaskConfig;
-import org.lionsoul.jcseg.core.SegmentFactory;
+import org.lionsoul.jcseg.tokenizer.core.ADictionary;
+import org.lionsoul.jcseg.tokenizer.core.DictionaryFactory;
+import org.lionsoul.jcseg.tokenizer.core.ISegment;
+import org.lionsoul.jcseg.tokenizer.core.IWord;
+import org.lionsoul.jcseg.tokenizer.core.JcsegTaskConfig;
+import org.lionsoul.jcseg.tokenizer.core.SegmentFactory;
 
 /**
  * Jcseg分词器分词效果评估

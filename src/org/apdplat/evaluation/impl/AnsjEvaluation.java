@@ -22,6 +22,7 @@ package org.apdplat.evaluation.impl;
 
 import java.util.*;
 
+import org.ansj.domain.Result;
 import org.ansj.domain.Term;
 import org.ansj.splitWord.analysis.BaseAnalysis;
 import org.ansj.splitWord.analysis.IndexAnalysis;
@@ -84,7 +85,7 @@ public class AnsjEvaluation extends Evaluation implements WordSegmenter{
             public String seg(String text) {
                 StringBuilder result = new StringBuilder();
                 try{
-                    List<Term> terms = null;
+                    Result terms = null;
                     switch(analysis){
                         case "BaseAnalysis":
                                 terms = BaseAnalysis.parse(text);

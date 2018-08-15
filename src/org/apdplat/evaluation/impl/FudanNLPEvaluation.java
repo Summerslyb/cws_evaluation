@@ -20,7 +20,7 @@
 
 package org.apdplat.evaluation.impl;
 
-import edu.fudan.nlp.cn.tag.CWSTagger;
+import org.fnlp.nlp.cn.tag.CWSTagger;
 
 import java.util.*;
 
