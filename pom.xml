@@ -124,8 +124,8 @@
             <!-- 软件环境： jdk1.7.0_51 apache-maven-3.0.4 sonar-3.6 -->
             <plugin>
                 <groupId>org.codehaus.sonar</groupId>
-                <artifactId>sonar-maven3-plugin</artifactId>
-                <version>${sonar-maven3-plugin.version}</version>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
@@ -139,11 +139,12 @@
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <sonar-maven3-plugin.version>5.1</sonar-maven3-plugin.version>
+        <sonar-maven-plugin.version>5.1</sonar-maven-plugin.version>
 
         <junit.version>4.12</junit.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <logback-classic.version>1.2.3</logback-classic.version>
+        <lucene.version>4.10.4</lucene.version>
         <word.version>1.3.1</word.version>
         <ansj.version>5.1.6</ansj.version>
         <stanford.version>3.9.1</stanford.version>
@@ -151,7 +152,7 @@
         <jcseg.version>2.2.0</jcseg.version>
         <mmseg4j.version>1.10.0</mmseg4j.version>
         <IKAnalyzer.version>2012_u6</IKAnalyzer.version>
-        <smartcn.version>7.4.0</smartcn.version>
+        <smartcn.version>4.10.4</smartcn.version>
         <hanlp.version>portable-1.6.7</hanlp.version>
         <fnlp.version>2.1</fnlp.version>
     </properties>
@@ -182,6 +183,12 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
+        <!--lucene-core-->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${lucene.version}</version>
+        </dependency>
         <!-- word分词器 -->
         <dependency>
             <groupId>org.apdplat</groupId>
@@ -199,6 +206,12 @@
             <groupId>edu.stanford.nlp</groupId>
             <artifactId>stanford-corenlp</artifactId>
             <version>${stanford.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>${stanford.version}</version>
+            <classifier>models</classifier>
         </dependency>
         <dependency>
             <groupId>edu.stanford.nlp</groupId>
@@ -236,12 +249,6 @@
             <artifactId>lucene-analyzers-smartcn</artifactId>
             <version>${smartcn.version}</version>
         </dependency>
-        <!-- smartcn分词器 需要lucene依赖 且和lucene版本同步 -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-core</artifactId>
-            <version>${smartcn.version}</version>
-        </dependency>
         <!-- HanLP分词器 -->
         <dependency>
             <groupId>com.hankcs</groupId>
@@ -254,11 +261,5 @@
             <artifactId>fnlp-core</artifactId>
             <version>${fnlp.version}</version>
         </dependency>
-        <!--&lt;!&ndash; fudannlp分词器 依赖  trove4j&ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>net.sf.trove4j</groupId>-->
-        <!--<artifactId>trove4j</artifactId>-->
-        <!--<version>3.0.3</version>-->
-        <!--</dependency>-->
     </dependencies>
 </project>
